@@ -130,7 +130,7 @@ function Home() {
                 </div>
                 <div className="bg-white text-secondary p-6 rounded-2xl text-center shadow-lg transform rotate-1 hover:rotate-0 transition-transform duration-300">
                   <p className="text-3xl mb-3">📡</p>
-                  <p className="font-bold text-lg mb-1">Your Router</p>
+                  <p className="font-bold text-lg mb-1 text-blue-900">Your Router</p>
                   <p className="font-medium opacity-70">Uses firmware to manage your Wi-Fi connection</p>
                 </div>
                 <div className="bg-primary text-primary-foreground p-6 rounded-2xl text-center shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-300">
