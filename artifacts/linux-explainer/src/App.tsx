@@ -69,11 +69,6 @@ function Home() {
             The computer showdown you didn't know you needed. Let's make sense of it all.
           </p>
           
-          <img 
-            src="/images/hero.png" 
-            alt="Hero illustration of computers" 
-            className="w-full max-w-2xl mx-auto rounded-3xl shadow-xl border-4 border-white transform rotate-1 hover:rotate-0 transition-transform duration-300"
-          />
         </motion.div>
       </section>
 
@@ -98,13 +93,6 @@ function Home() {
                 </p>
               </div>
             </FadeIn>
-            <FadeIn delay={0.4}>
-              <img 
-                src="/images/director.png" 
-                alt="Movie director analogy" 
-                className="w-full max-w-md mx-auto drop-shadow-2xl hover:scale-105 transition-transform duration-300"
-              />
-            </FadeIn>
           </div>
         </div>
       </section>
@@ -112,14 +100,7 @@ function Home() {
       {/* 3. WHAT IS WINDOWS? */}
       <section className="py-24 px-6 bg-background">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <FadeIn>
-              <img 
-                src="/images/windows.png" 
-                alt="Friendly computer" 
-                className="w-full max-w-md mx-auto drop-shadow-xl hover:-translate-y-4 transition-transform duration-300"
-              />
-            </FadeIn>
+          <div className="max-w-3xl mx-auto">
             <FadeIn delay={0.2}>
               <div className="bg-blue-100 p-8 rounded-3xl border-4 border-blue-200 shadow-lg transform rotate-1">
                 <h2 className="text-4xl md:text-5xl font-black mb-6 text-blue-900">
@@ -140,8 +121,8 @@ function Home() {
       {/* 4. WHAT IS LINUX? */}
       <section className="py-24 px-6 bg-primary text-primary-foreground">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <FadeIn className="order-2 md:order-1">
+          <div className="max-w-3xl mx-auto">
+            <FadeIn>
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border-2 border-white/20 shadow-lg transform -rotate-1">
                 <h2 className="text-4xl md:text-5xl font-black mb-6 text-white">
                   Meet Linux
@@ -153,13 +134,6 @@ function Home() {
                   It wasn't made by one giant company to make money. It was built by thousands of smart people around the world who decided to give it away for <strong>free</strong>. You can change anything about it, and it secretly runs the internet.
                 </p>
               </div>
-            </FadeIn>
-            <FadeIn delay={0.2} className="order-1 md:order-2">
-              <img 
-                src="/images/linux.png" 
-                alt="Tux the Penguin" 
-                className="w-full max-w-md mx-auto drop-shadow-2xl hover:rotate-12 transition-transform duration-300"
-              />
             </FadeIn>
           </div>
         </div>
@@ -270,15 +244,7 @@ function Home() {
             </p>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <FadeIn delay={0.2}>
-              <img 
-                src="/images/hiding.png" 
-                alt="Rockets and phones" 
-                className="w-full rounded-3xl shadow-2xl border-4 border-gray-800"
-              />
-            </FadeIn>
-            <div className="space-y-6">
+          <div className="max-w-2xl mx-auto space-y-6">
               <FadeIn delay={0.3}>
                 <div className="flex items-center gap-4 p-4 bg-gray-800 rounded-2xl">
                   <Smartphone className="text-accent" size={32} />
@@ -303,7 +269,6 @@ function Home() {
                   <p className="text-lg font-medium text-white">Smart TVs and even ATMs use it because it never crashes.</p>
                 </div>
               </FadeIn>
-            </div>
           </div>
         </div>
       </section>
