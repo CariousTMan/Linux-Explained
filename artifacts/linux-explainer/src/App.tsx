@@ -121,25 +121,29 @@ function Home() {
                 </p>
               </div>
             </FadeIn>
-            <FadeIn delay={0.4}>
-              <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <FadeIn delay={0.3}>
                 <div className="bg-accent text-accent-foreground p-6 rounded-2xl text-center shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-300">
                   <p className="text-3xl mb-3">⌨️</p>
                   <p className="font-bold text-lg mb-1">Your Keyboard</p>
                   <p className="font-medium opacity-80">Has firmware that tells it how to send keystrokes</p>
                 </div>
+              </FadeIn>
+              <FadeIn delay={0.5}>
                 <div className="bg-white text-secondary p-6 rounded-2xl text-center shadow-lg transform rotate-1 hover:rotate-0 transition-transform duration-300">
                   <p className="text-3xl mb-3">📡</p>
                   <p className="font-bold text-lg mb-1 text-blue-950">Your Router</p>
                   <p className="font-medium text-blue-950 opacity-80">Uses firmware to manage your Wi-Fi connection</p>
                 </div>
+              </FadeIn>
+              <FadeIn delay={0.7}>
                 <div className="bg-primary text-primary-foreground p-6 rounded-2xl text-center shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-300">
                   <p className="text-3xl mb-3">🖥️</p>
                   <p className="font-bold text-lg mb-1">Your Motherboard</p>
                   <p className="font-medium opacity-80">Runs BIOS/UEFI firmware before any OS loads</p>
                 </div>
-              </div>
-            </FadeIn>
+              </FadeIn>
+            </div>
           </div>
         </div>
       </section>
