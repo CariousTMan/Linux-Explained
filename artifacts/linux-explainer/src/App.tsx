@@ -98,43 +98,45 @@ function Home() {
       </section>
 
       {/* 2b. WHAT IS FIRMWARE? */}
-      <section className="py-24 px-6 bg-background">
-        <div className="max-w-5xl mx-auto">
+      <section className="py-24 px-6 bg-secondary text-secondary-foreground relative overflow-hidden">
+        <div className="absolute top-10 right-10 w-72 h-72 bg-white/10 rounded-full blur-3xl -z-0" />
+        <div className="absolute bottom-10 left-10 w-56 h-56 bg-accent/20 rounded-full blur-3xl -z-0" />
+        <div className="max-w-5xl mx-auto relative z-10">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-black mb-12 text-center text-foreground">
-              Wait... What is <strong>firmware</strong>?
+            <h2 className="text-4xl md:text-6xl font-black mb-12 text-center text-white drop-shadow-sm">
+              Wait... What is <strong className="underline decoration-accent decoration-4">firmware</strong>?
             </h2>
           </FadeIn>
           <div className="max-w-3xl mx-auto">
             <FadeIn delay={0.2}>
-              <div className="bg-muted p-8 rounded-3xl border-4 border-muted shadow-lg">
-                <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground mb-6">
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border-2 border-white/20 shadow-lg">
+                <p className="text-xl md:text-2xl font-medium leading-relaxed text-white mb-6">
                   Okay, so remember how the Operating System is like the Director of a movie set? Well, firmware is the <strong>building itself</strong> — the walls, the electricity, the plumbing.
                 </p>
-                <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground mb-6">
+                <p className="text-xl md:text-2xl font-medium leading-relaxed text-white mb-6">
                   Firmware is a tiny piece of software that lives <em>inside</em> the hardware — like your keyboard, your graphics card, or your router. It's baked in at the factory and tells that specific piece of hardware the bare minimum it needs to know to turn on and do its job.
                 </p>
-                <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground">
+                <p className="text-xl md:text-2xl font-medium leading-relaxed text-white">
                   You almost never touch firmware. It just sits there quietly doing its thing. But here's the wild part — your computer actually runs firmware <em>before</em> it even loads Windows or Linux. It wakes up, checks that everything is plugged in and working, and then hands control over to the OS. That startup firmware is called the <strong>BIOS</strong> (or its newer version, <strong>UEFI</strong>).
                 </p>
               </div>
             </FadeIn>
             <FadeIn delay={0.4}>
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="bg-accent/20 p-6 rounded-2xl text-center border-2 border-accent/30">
+                <div className="bg-accent text-accent-foreground p-6 rounded-2xl text-center shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-300">
                   <p className="text-3xl mb-3">⌨️</p>
-                  <p className="font-bold text-lg text-foreground mb-1">Your Keyboard</p>
-                  <p className="text-foreground/70 font-medium">Has firmware that tells it how to send keystrokes</p>
+                  <p className="font-bold text-lg mb-1">Your Keyboard</p>
+                  <p className="font-medium opacity-80">Has firmware that tells it how to send keystrokes</p>
                 </div>
-                <div className="bg-secondary/20 p-6 rounded-2xl text-center border-2 border-secondary/30">
+                <div className="bg-white text-secondary p-6 rounded-2xl text-center shadow-lg transform rotate-1 hover:rotate-0 transition-transform duration-300">
                   <p className="text-3xl mb-3">📡</p>
-                  <p className="font-bold text-lg text-foreground mb-1">Your Router</p>
-                  <p className="text-foreground/70 font-medium">Uses firmware to manage your Wi-Fi connection</p>
+                  <p className="font-bold text-lg mb-1">Your Router</p>
+                  <p className="font-medium opacity-70">Uses firmware to manage your Wi-Fi connection</p>
                 </div>
-                <div className="bg-primary/10 p-6 rounded-2xl text-center border-2 border-primary/20">
+                <div className="bg-primary text-primary-foreground p-6 rounded-2xl text-center shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-300">
                   <p className="text-3xl mb-3">🖥️</p>
-                  <p className="font-bold text-lg text-foreground mb-1">Your Motherboard</p>
-                  <p className="text-foreground/70 font-medium">Runs BIOS/UEFI firmware before any OS loads</p>
+                  <p className="font-bold text-lg mb-1">Your Motherboard</p>
+                  <p className="font-medium opacity-80">Runs BIOS/UEFI firmware before any OS loads</p>
                 </div>
               </div>
             </FadeIn>
