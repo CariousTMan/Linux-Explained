@@ -60,7 +60,7 @@ function Home() {
           className="max-w-4xl mx-auto z-10"
         >
           <div className="inline-block bg-accent text-accent-foreground px-4 py-2 rounded-full font-bold text-sm mb-6 uppercase tracking-wider shadow-sm transform -rotate-2">
-            The Ultimate Guide for Humans
+            an eduacational webpage to help inform the uninformed
           </div>
           <h1 className="text-6xl md:text-8xl font-black text-primary mb-6 leading-tight drop-shadow-md">
             Linux <span className="text-foreground">vs</span> Windows
