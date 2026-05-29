@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Linux for Beginners"
+version = "1.0.0"
+id = "artifacts/linux-explainer"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21987
+
+[services.development]
+run = "pnpm --filter @workspace/linux-explainer run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/linux-explainer", "run", "build" ]
+publicDir = "artifacts/linux-explainer/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21987"
+BASE_PATH = "/"

@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "qp1wGReN8GIpSX81GPgYm"
+uri = "file://artifacts/linux-explainer/public/images/hero.png"
+type = "image"
+title = "Hero illustration of computers"
+
+[[generated]]
+id = "0bEaaWN9PUOJlJ4eNeI3I"
+uri = "file://artifacts/linux-explainer/public/images/director.png"
+type = "image"
+title = "Movie director illustration"
+
+[[generated]]
+id = "nZOAZMkqBOaF5YgyJGxkI"
+uri = "file://artifacts/linux-explainer/public/images/windows.png"
+type = "image"
+title = "Friendly computer illustration"
+
+[[generated]]
+id = "hXC2IP-mBVYJLic6m7P1m"
+uri = "file://artifacts/linux-explainer/public/images/linux.png"
+type = "image"
+title = "Cute penguin mascot"
+
+[[generated]]
+id = "dIFygVxV5UEuaK3CCmBF3"
+uri = "file://artifacts/linux-explainer/public/images/hiding.png"
+type = "image"
+title = "Space rocket and phone"
