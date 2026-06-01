@@ -512,6 +512,118 @@ function Home() {
         </div>
       </section>
 
+      {/* 6b2. GPUs */}
+      <section className="py-24 px-6 bg-background">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-center text-foreground">
+              GPUs: The Other Brain
+            </h2>
+            <p className="text-xl text-center text-foreground/70 font-medium mb-16 max-w-3xl mx-auto">
+              Your CPU handles general thinking. Your GPU handles the visual stuff — and a whole lot more.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <FadeIn delay={0.1}>
+              <div className="bg-card p-8 rounded-3xl border-2 border-card-border shadow-md h-full">
+                <div className="text-5xl mb-4">🧠 vs 🎨</div>
+                <h3 className="text-2xl font-black text-foreground mb-4">CPU vs GPU — What's the Difference?</h3>
+                <p className="text-foreground/80 font-medium leading-relaxed mb-4">
+                  Your <strong>CPU (Central Processing Unit)</strong> is the main brain — it handles a few tasks at a time but does each one incredibly fast. Think of it as one genius solving problems one by one.
+                </p>
+                <p className="text-foreground/80 font-medium leading-relaxed">
+                  Your <strong>GPU (Graphics Processing Unit)</strong> works completely differently. It's thousands of tiny, simpler processors all working in parallel. Think of it as an army of workers each doing one tiny piece of a giant puzzle at the same time. That's perfect for rendering graphics — where you need to calculate the colour of millions of pixels simultaneously, every single frame.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <div className="bg-card p-8 rounded-3xl border-2 border-card-border shadow-md h-full">
+                <div className="text-5xl mb-4">📺</div>
+                <h3 className="text-2xl font-black text-foreground mb-4">Integrated vs Dedicated Graphics</h3>
+                <div className="space-y-4">
+                  <div className="p-4 bg-blue-50 rounded-xl">
+                    <p className="font-bold text-blue-900 mb-1">Integrated GPU</p>
+                    <p className="text-blue-800 font-medium">Built into the same chip as the CPU. Uses your regular RAM. Found in laptops, Chromebooks, and budget PCs. Fine for YouTube and schoolwork, struggles with modern games or video editing. Intel calls theirs "Intel Iris" or "Intel UHD".</p>
+                  </div>
+                  <div className="p-4 bg-purple-50 rounded-xl">
+                    <p className="font-bold text-purple-900 mb-1">Dedicated GPU</p>
+                    <p className="text-purple-800 font-medium">A separate card plugged into the motherboard with its own fast memory (called VRAM). Much more powerful. Found in gaming PCs and workstations. Made by NVIDIA or AMD. Runs hot and needs its own power connector.</p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <FadeIn delay={0.3}>
+              <div className="bg-card p-7 rounded-3xl border-2 border-card-border shadow-md h-full">
+                <div className="text-4xl mb-4">🟢</div>
+                <h3 className="text-xl font-black text-foreground mb-3">NVIDIA</h3>
+                <p className="text-foreground/80 font-medium leading-relaxed mb-3">
+                  The market leader for gaming and AI. Their cards are called <strong>GeForce</strong> (consumer) and <strong>RTX/GTX</strong> series. NVIDIA invented <strong>CUDA</strong> — a way to use the GPU for non-graphics tasks like AI, video rendering, and scientific simulations.
+                </p>
+                <div className="p-3 bg-green-50 rounded-xl">
+                  <p className="text-green-900 font-bold text-sm mb-1">On Linux:</p>
+                  <p className="text-green-800 font-medium text-sm">Historically painful. NVIDIA uses proprietary (closed) drivers, so the Linux community had to work around them. Getting NVIDIA working well on Linux used to require significant effort — though it's improved a lot recently.</p>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.4}>
+              <div className="bg-card p-7 rounded-3xl border-2 border-card-border shadow-md h-full">
+                <div className="text-4xl mb-4">🔴</div>
+                <h3 className="text-xl font-black text-foreground mb-3">AMD</h3>
+                <p className="text-foreground/80 font-medium leading-relaxed mb-3">
+                  NVIDIA's main competitor. Their cards are called <strong>Radeon RX</strong> series. Generally a bit cheaper, and AMD has made a big push into the CPU+GPU combo chip space with their <strong>APUs</strong>.
+                </p>
+                <div className="p-3 bg-red-50 rounded-xl">
+                  <p className="text-red-900 font-bold text-sm mb-1">On Linux:</p>
+                  <p className="text-red-800 font-medium text-sm">AMD is the Linux community's darling. Their drivers are <strong>open source</strong> and built directly into the Linux kernel — meaning AMD graphics just work out of the box on Linux with no extra setup.</p>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.5}>
+              <div className="bg-card p-7 rounded-3xl border-2 border-card-border shadow-md h-full">
+                <div className="text-4xl mb-4">🔵</div>
+                <h3 className="text-xl font-black text-foreground mb-3">Intel Arc</h3>
+                <p className="text-foreground/80 font-medium leading-relaxed mb-3">
+                  Intel — who made integrated graphics for decades — recently released their first dedicated GPU line called <strong>Arc</strong>. They're the newcomer, often cheaper, and improving fast.
+                </p>
+                <div className="p-3 bg-blue-50 rounded-xl">
+                  <p className="text-blue-900 font-bold text-sm mb-1">On Linux:</p>
+                  <p className="text-blue-800 font-medium text-sm">Similar to AMD — Intel's drivers are open source and built into the kernel. Generally works well, though the lineup is newer and less battle-tested than NVIDIA or AMD.</p>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.6}>
+            <div className="bg-foreground text-background p-8 rounded-3xl shadow-xl">
+              <h3 className="text-2xl font-black text-white mb-6 text-center">GPUs Aren't Just for Gaming Anymore</h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {[
+                  { icon: "🤖", title: "AI & Machine Learning", desc: "Training AI models requires doing billions of simple math operations in parallel — exactly what GPUs are built for. ChatGPT was trained on thousands of NVIDIA GPUs." },
+                  { icon: "🎬", title: "Video Editing", desc: "Exporting a 4K video means processing millions of frames. A GPU can do this in minutes; a CPU alone might take hours." },
+                  { icon: "🔬", title: "Science & Simulation", desc: "Weather forecasting, drug discovery, and physics simulations all offload massive parallel calculations to GPUs." },
+                  { icon: "💎", title: "VRAM — GPU Memory", desc: "GPUs have their own dedicated RAM called VRAM. More VRAM means higher-res textures in games and larger AI models. Budget cards have 4–8GB; high-end ones have 16–24GB." },
+                ].map((item, i) => (
+                  <FadeIn key={i} delay={0.7 + i * 0.1}>
+                    <div className="bg-gray-800 p-5 rounded-2xl h-full">
+                      <p className="text-3xl mb-3">{item.icon}</p>
+                      <p className="font-black text-white text-lg mb-2">{item.title}</p>
+                      <p className="text-gray-300 font-medium text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* 6c. GOING DEEPER: PHONE STUFF & BOOTLOADERS */}
       <section className="py-24 px-6 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
