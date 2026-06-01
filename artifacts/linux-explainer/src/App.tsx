@@ -350,7 +350,7 @@ function Home() {
                 <ul className="space-y-4 text-lg font-medium text-gray-700">
                   <li className="flex gap-2"><span>✨</span> You like tinkering, building, and coding</li>
                   <li className="flex gap-2"><span>✨</span> You have an old, slow computer you want to make fast again</li>
-                  <li className="flex gap-2"><span>✨</span> You hate the idea of a big company tracking you</li>
+                  <li className="flex gap-2"><span>✨</span> You want fine-grained control and infinite customizability at the cost of simplicity</li>
                 </ul>
               </div>
             </FadeIn>
