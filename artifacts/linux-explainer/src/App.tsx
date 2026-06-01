@@ -341,6 +341,7 @@ function Home() {
                   <li className="flex gap-2"><span>✨</span> You just want things to work instantly</li>
                   <li className="flex gap-2"><span>✨</span> You play a LOT of different PC games</li>
                   <li className="flex gap-2"><span>✨</span> You don't care about changing how your screen looks too much</li>
+                  <li className="flex gap-2"><span>✨</span> You want it to "just work"</li>
                 </ul>
               </div>
             </FadeIn>
@@ -351,6 +352,7 @@ function Home() {
                   <li className="flex gap-2"><span>✨</span> You like tinkering, building, and coding</li>
                   <li className="flex gap-2"><span>✨</span> You have an old, slow computer you want to make fast again</li>
                   <li className="flex gap-2"><span>✨</span> You want fine-grained control and infinite customizability at the cost of simplicity</li>
+                  <li className="flex gap-2"><span>✨</span> You want to configure everything yourself and have only what YOU install</li>
                 </ul>
               </div>
             </FadeIn>
