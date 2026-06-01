@@ -350,7 +350,7 @@ function Home() {
                 <h3 className="text-2xl font-black mb-4 text-purple-600 border-b-4 border-purple-100 pb-2">You are Team Linux if...</h3>
                 <ul className="space-y-4 text-lg font-medium text-gray-700">
                   <li className="flex gap-2"><span>✨</span> You like tinkering, building, and coding</li>
-                  <li className="flex gap-2"><span>✨</span> You have an old, slow computer you want to make fast again</li>
+                  <li className="flex gap-2"><span>✨</span> You have an old, slow pc not capable of running windows</li>
                   <li className="flex gap-2"><span>✨</span> You want fine-grained control and infinite customizability at the cost of simplicity</li>
                   <li className="flex gap-2"><span>✨</span> You want to configure everything yourself and have only what YOU install</li>
                 </ul>
