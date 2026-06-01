@@ -191,6 +191,10 @@ function Home() {
                     <p className="font-black text-white mb-1">.rpm — Red Hat Package</p>
                     <p className="text-white/70 font-medium text-sm">Used by Fedora, RHEL, and CentOS. Handled by <code className="bg-white/10 rounded px-1">dnf</code> or <code className="bg-white/10 rounded px-1">yum</code>. Same idea as .deb but for a different family of Linux distros.</p>
                   </div>
+                  <div className="bg-green-900/50 border border-green-700/40 rounded-xl p-4">
+                    <p className="font-black text-white mb-1">.AppImage — Universal Linux App</p>
+                    <p className="text-white/70 font-medium text-sm">A single self-contained file that runs on almost any Linux distro — no installation, no package manager needed. You download it, mark it as executable, and double-click. It bundles everything the app needs inside itself. Think of it like a .exe but for all of Linux at once.</p>
+                  </div>
                 </div>
                 <p className="text-white/60 font-medium text-sm mt-4">
                   A .deb won't run on Windows, and a .exe won't run on Linux — they're compiled for completely different environments. This is why you can't just grab any download and expect it to work everywhere.
