@@ -324,6 +324,66 @@ function Home() {
         </div>
       </section>
 
+      {/* 6b. HARDWARE: ARM64 vs x86_64 */}
+      <section className="py-24 px-6 bg-muted">
+        <div className="max-w-5xl mx-auto">
+          <FadeIn>
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-center text-foreground">
+              Wait — Not All Computers Are Built the Same
+            </h2>
+            <p className="text-xl text-center text-foreground/70 font-medium mb-16 max-w-3xl mx-auto">
+              Before we go further, there's something wild you probably never knew: computers don't all speak the same language inside. The <strong>chip</strong> — the brain of your device — comes in two very different flavors.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <FadeIn delay={0.2}>
+              <div className="bg-card p-8 rounded-3xl border-2 border-card-border shadow-md h-full">
+                <div className="text-5xl mb-4 text-center">🖥️</div>
+                <h3 className="text-2xl font-black text-center mb-4 text-foreground">x86_64</h3>
+                <p className="text-lg font-semibold text-center text-primary mb-4">"The Classic Desktop Brain"</p>
+                <p className="text-lg font-medium text-foreground/80 leading-relaxed">
+                  This is the chip design that's been inside most laptops and desktop PCs for decades. Intel and AMD make these. When people say "a PC," they almost always mean an x86_64 machine. Windows was built entirely around this architecture — it's basically their home turf.
+                </p>
+                <div className="mt-6 p-4 bg-blue-50 rounded-xl">
+                  <p className="font-bold text-blue-900 mb-1">You'll find x86_64 in:</p>
+                  <p className="text-blue-800 font-medium">Most Windows laptops, gaming PCs, desktop computers, and servers in data centers.</p>
+                </div>
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.4}>
+              <div className="bg-card p-8 rounded-3xl border-2 border-card-border shadow-md h-full">
+                <div className="text-5xl mb-4 text-center">📱</div>
+                <h3 className="text-2xl font-black text-center mb-4 text-foreground">ARM64</h3>
+                <p className="text-lg font-semibold text-center text-secondary mb-4">"The Efficient Mobile Brain"</p>
+                <p className="text-lg font-medium text-foreground/80 leading-relaxed">
+                  ARM chips were designed to use as little battery as possible while still being powerful. They're everywhere in phones and tablets. But recently, ARM has been showing up in laptops too — Apple's M1/M2/M3 chips are ARM, and it turns out they're incredibly fast.
+                </p>
+                <div className="mt-6 p-4 bg-purple-50 rounded-xl">
+                  <p className="font-bold text-purple-900 mb-1">You'll find ARM64 in:</p>
+                  <p className="text-purple-800 font-medium">Every smartphone, every iPad, Apple MacBooks (2020 and newer), Raspberry Pi, and Chromebooks.</p>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.5}>
+            <div className="bg-foreground text-background p-8 rounded-3xl shadow-xl max-w-3xl mx-auto">
+              <h3 className="text-2xl font-black mb-4 text-white">So where do phones fit in?</h3>
+              <p className="text-lg font-medium text-white/80 leading-relaxed mb-4">
+                Phones are basically tiny ARM computers — and they run their own special operating systems. Android is built on top of Linux (so Tux the penguin is secretly inside your phone). iOS on iPhones is Apple's own OS, also built for ARM.
+              </p>
+              <p className="text-lg font-medium text-white/80 leading-relaxed mb-4">
+                Here's the weird part: you can't just take a Windows program and run it on a phone. The phone's chip speaks a different language. That's why apps have to be specially made for Android or iPhone — it's not the same code that runs on your PC.
+              </p>
+              <p className="text-lg font-medium text-white/80 leading-relaxed">
+                Linux, being open and flexible, actually runs on <em>both</em> x86_64 and ARM64. That's a big reason it's everywhere — from your phone to a SpaceX rocket to a supercomputer. Windows only recently started supporting ARM, and it still has a long way to go.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* 7. WHICH ONE IS RIGHT FOR YOU? */}
       <section className="py-24 px-6 bg-accent text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
