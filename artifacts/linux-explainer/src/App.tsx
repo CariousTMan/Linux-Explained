@@ -584,6 +584,203 @@ function Home() {
         </div>
       </section>
 
+      {/* 6e. ANDROID VS APPLE */}
+      <section className="py-24 px-6 bg-secondary text-secondary-foreground relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-60 h-60 bg-accent/10 rounded-full blur-3xl" />
+        <div className="max-w-5xl mx-auto relative z-10">
+          <FadeIn>
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-center text-white drop-shadow-sm">
+              Android vs iPhone: The Freedom Argument
+            </h2>
+            <p className="text-xl text-center text-white/70 font-medium mb-16 max-w-3xl mx-auto">
+              Both are great phones. But under the hood, they treat you very differently.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-10 mb-12">
+            <FadeIn delay={0.2}>
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border-2 border-white/20 shadow-lg h-full">
+                <div className="text-5xl text-center mb-4">🍎</div>
+                <h3 className="text-2xl font-black text-center text-white mb-6">iPhone (Apple)</h3>
+                <ul className="space-y-4">
+                  <li className="flex gap-3 items-start">
+                    <span className="text-red-400 font-black text-xl mt-0.5">✗</span>
+                    <p className="text-white/80 font-medium">You can only install apps Apple has approved in the App Store. They decide what's allowed on your own phone.</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="text-red-400 font-black text-xl mt-0.5">✗</span>
+                    <p className="text-white/80 font-medium">You can't replace the default apps. Stuck with Safari? Apple says so.</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="text-red-400 font-black text-xl mt-0.5">✗</span>
+                    <p className="text-white/80 font-medium">Rooting or jailbreaking is difficult, quickly patched, and voids all support.</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="text-red-400 font-black text-xl mt-0.5">✗</span>
+                    <p className="text-white/80 font-medium">The bootloader is locked with no official way to unlock it — Apple doesn't want you touching the internals.</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="text-green-400 font-black text-xl mt-0.5">✓</span>
+                    <p className="text-white/80 font-medium">In exchange, iPhones are polished, get long software support, and "just work" — Apple's whole philosophy is simplicity.</p>
+                  </li>
+                </ul>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.4}>
+              <div className="bg-accent text-accent-foreground p-8 rounded-3xl shadow-xl h-full">
+                <div className="text-5xl text-center mb-4">🤖</div>
+                <h3 className="text-2xl font-black text-center mb-6">Android (Google + Others)</h3>
+                <ul className="space-y-4">
+                  <li className="flex gap-3 items-start">
+                    <span className="font-black text-xl mt-0.5">✓</span>
+                    <p className="font-medium opacity-90">You can install apps from <strong>anywhere</strong> — not just the Play Store. This is called "sideloading" and Android supports it out of the box.</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="font-black text-xl mt-0.5">✓</span>
+                    <p className="font-medium opacity-90">Many Android manufacturers (OnePlus, Google Pixel, Fairphone) officially let you <strong>unlock the bootloader</strong> and install a completely different OS.</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="font-black text-xl mt-0.5">✓</span>
+                    <p className="font-medium opacity-90">Android is built on Linux — so the community around modifying it is huge. Custom ROMs like <strong>LineageOS</strong> can replace the entire Android install.</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="font-black text-xl mt-0.5">✓</span>
+                    <p className="font-medium opacity-90">You can root your phone, giving yourself full admin access — something Apple makes essentially impossible.</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="font-black text-xl mt-0.5 opacity-60">~</span>
+                    <p className="font-medium opacity-80">The tradeoff: more freedom means more responsibility. You can break things. But you can also fix them.</p>
+                  </li>
+                </ul>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.6}>
+            <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border-2 border-white/20 max-w-3xl mx-auto text-center">
+              <p className="text-2xl font-black text-white mb-3">The bottom line</p>
+              <p className="text-lg text-white/80 font-medium leading-relaxed">
+                An iPhone is like a company car — maintained for you, but you follow their rules. An Android is like owning your own car — you're responsible for it, but you can mod it, repaint it, swap the engine, or hand the keys to a mechanic. For people who like to tinker, Android wins every time.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* 6f. EDL MODE */}
+      <section className="py-24 px-6 bg-foreground text-background">
+        <div className="max-w-5xl mx-auto">
+          <FadeIn>
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-center text-white">
+              EDL Mode: The Nuclear Option
+            </h2>
+            <p className="text-xl text-center text-gray-400 font-medium mb-16 max-w-3xl mx-auto">
+              When a phone is so bricked it won't even turn on, there's usually one last escape hatch built into the chip itself.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            <FadeIn delay={0.2}>
+              <div className="bg-gray-800 p-8 rounded-3xl border-2 border-gray-700 h-full">
+                <div className="text-4xl mb-4">⚠️</div>
+                <h3 className="text-2xl font-black text-white mb-4">What is EDL?</h3>
+                <p className="text-gray-300 font-medium leading-relaxed mb-4">
+                  <strong className="text-white">Emergency Download Mode (EDL)</strong> is a special low-level mode built into Qualcomm chips (the processor found in most Android phones). It runs at a level even deeper than the bootloader — it's in the chip's own firmware, meaning it works even if the bootloader is completely broken or missing.
+                </p>
+                <p className="text-gray-300 font-medium leading-relaxed">
+                  In EDL mode, the phone shows up on your PC as a special device that lets you read or write directly to the phone's storage at a raw level — bypassing Android, bypassing the bootloader, bypassing almost everything. It's the closest thing to a hardware reset switch that exists in software.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.4}>
+              <div className="bg-gray-800 p-8 rounded-3xl border-2 border-gray-700 h-full">
+                <div className="text-4xl mb-4">🔧</div>
+                <h3 className="text-2xl font-black text-white mb-4">When would you use it?</h3>
+                <ul className="space-y-3 text-gray-300 font-medium">
+                  <li className="flex gap-3 items-start">
+                    <span className="text-accent font-black mt-0.5">→</span>
+                    <p>Your phone won't boot at all after a failed flash or update</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="text-accent font-black mt-0.5">→</span>
+                    <p>You accidentally corrupted the bootloader and now the phone is stuck</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="text-accent font-black mt-0.5">→</span>
+                    <p>You want to restore the phone to completely stock firmware from scratch</p>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <span className="text-accent font-black mt-0.5">→</span>
+                    <p>You're a developer who needs to reflash the entire device image</p>
+                  </li>
+                </ul>
+                <div className="mt-6 p-4 bg-red-900/40 border border-red-700/50 rounded-xl">
+                  <p className="text-red-300 font-bold text-sm">Warning: EDL gives you enough power to permanently brick your phone if used wrong. This is an expert tool.</p>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.5}>
+            <div className="bg-gray-800 p-8 rounded-3xl border-2 border-accent/40 mb-8 max-w-3xl mx-auto">
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-3xl">📱</span>
+                <h3 className="text-2xl font-black text-white">OnePlus 7 Pro — EDL How-To</h3>
+              </div>
+              <p className="text-gray-300 font-medium leading-relaxed mb-6">
+                The OnePlus 7 Pro is famous in the modding community for being very EDL-friendly. Here's how to enter EDL mode on it (and similar OnePlus devices):
+              </p>
+              <div className="space-y-3">
+                <div className="flex gap-4 items-start bg-gray-900 p-4 rounded-xl">
+                  <span className="bg-accent text-accent-foreground font-black text-sm w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5">1</span>
+                  <p className="text-gray-300 font-medium">Power off the phone completely.</p>
+                </div>
+                <div className="flex gap-4 items-start bg-gray-900 p-4 rounded-xl">
+                  <span className="bg-accent text-accent-foreground font-black text-sm w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5">2</span>
+                  <p className="text-gray-300 font-medium">Hold <strong className="text-white">Volume Up + Volume Down</strong> simultaneously, then plug in a USB cable to your PC while still holding both buttons.</p>
+                </div>
+                <div className="flex gap-4 items-start bg-gray-900 p-4 rounded-xl">
+                  <span className="bg-accent text-accent-foreground font-black text-sm w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5">3</span>
+                  <p className="text-gray-300 font-medium">The screen stays <strong className="text-white">completely black</strong> — this is normal. EDL mode has no UI.</p>
+                </div>
+                <div className="flex gap-4 items-start bg-gray-900 p-4 rounded-xl">
+                  <span className="bg-accent text-accent-foreground font-black text-sm w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5">4</span>
+                  <p className="text-gray-300 font-medium">On your PC, the phone shows up as <strong className="text-white">"QHSUSB_BULK" or "Qualcomm HS-USB QDLoader"</strong> in Device Manager (Windows) or <code className="bg-gray-700 px-1 rounded">lsusb</code> (Linux).</p>
+                </div>
+                <div className="flex gap-4 items-start bg-gray-900 p-4 rounded-xl">
+                  <span className="bg-accent text-accent-foreground font-black text-sm w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5">5</span>
+                  <p className="text-gray-300 font-medium">Use a tool like <strong className="text-white">QFIL</strong> (Windows) or <strong className="text-white">edl</strong> (Linux/Python) to flash stock firmware or recovery images.</p>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.6}>
+            <div className="bg-gray-800 p-6 rounded-3xl border-2 border-gray-700 max-w-3xl mx-auto">
+              <h3 className="text-xl font-black text-white mb-4">Other phones with EDL access</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                {[
+                  { name: "OnePlus 6/6T", note: "Vol Up + Vol Down + USB" },
+                  { name: "OnePlus 8/8 Pro", note: "Same combo as 7 Pro" },
+                  { name: "Xiaomi/Redmi", note: "Most models support EDL" },
+                  { name: "POCO phones", note: "Qualcomm-based, EDL works" },
+                  { name: "Google Pixel", note: "Uses Fastboot instead — easier" },
+                  { name: "Fairphone", note: "Official unlock, no EDL needed" },
+                ].map((phone, i) => (
+                  <div key={i} className="bg-gray-900 p-4 rounded-xl">
+                    <p className="font-bold text-white text-sm mb-1">{phone.name}</p>
+                    <p className="text-gray-400 text-xs font-medium">{phone.note}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* 7. WHICH ONE IS RIGHT FOR YOU? */}
       <section className="py-24 px-6 bg-accent text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
