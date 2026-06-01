@@ -750,7 +750,9 @@ function Home() {
             <FadeIn delay={0.15}>
               <div className="bg-gray-800 p-8 rounded-3xl border-2 border-gray-700 h-full">
                 <div className="flex items-center gap-3 mb-5">
-                  <span className="text-3xl">🧓</span>
+                  <div className="bg-black rounded-lg px-3 py-1.5 font-mono text-green-400 text-xs font-bold tracking-wider border border-green-800 leading-tight">
+                    <span className="opacity-60">C:\&gt; </span>BIOS_
+                  </div>
                   <h3 className="text-2xl font-black text-white">BIOS</h3>
                   <span className="ml-auto text-xs font-bold bg-gray-700 text-gray-300 px-3 py-1 rounded-full uppercase tracking-wider">Legacy</span>
                 </div>
