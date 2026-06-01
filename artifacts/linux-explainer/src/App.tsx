@@ -168,6 +168,37 @@ function Home() {
             </FadeIn>
 
             <FadeIn delay={0.6}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">📥</div>
+                <h3 className="text-xl font-black text-white mb-3">.exe vs .msi vs .deb vs .rpm</h3>
+                <p className="text-white/80 font-medium leading-relaxed mb-5">
+                  When you download a program, the file format tells you which OS it was built for — and how it installs. They're all "binaries" (compiled machine code), but packaged differently.
+                </p>
+                <div className="space-y-3">
+                  <div className="bg-blue-900/50 border border-blue-700/40 rounded-xl p-4">
+                    <p className="font-black text-white mb-1">.exe — Windows Executable</p>
+                    <p className="text-white/70 font-medium text-sm">The classic Windows program file. Double-click and it runs. No package manager involved — you're on your own for updates.</p>
+                  </div>
+                  <div className="bg-blue-900/50 border border-blue-700/40 rounded-xl p-4">
+                    <p className="font-black text-white mb-1">.msi — Windows Installer</p>
+                    <p className="text-white/70 font-medium text-sm">A smarter Windows package. Handles installation steps, adds the app to your Start Menu, and can cleanly uninstall — unlike a bare .exe which can leave junk behind.</p>
+                  </div>
+                  <div className="bg-purple-900/50 border border-purple-700/40 rounded-xl p-4">
+                    <p className="font-black text-white mb-1">.deb — Debian/Ubuntu Package</p>
+                    <p className="text-white/70 font-medium text-sm">Used by Debian, Ubuntu, and Linux Mint. Handled by the <code className="bg-white/10 rounded px-1">apt</code> package manager. Includes metadata, dependencies, and uninstall info all in one file.</p>
+                  </div>
+                  <div className="bg-red-900/50 border border-red-700/40 rounded-xl p-4">
+                    <p className="font-black text-white mb-1">.rpm — Red Hat Package</p>
+                    <p className="text-white/70 font-medium text-sm">Used by Fedora, RHEL, and CentOS. Handled by <code className="bg-white/10 rounded px-1">dnf</code> or <code className="bg-white/10 rounded px-1">yum</code>. Same idea as .deb but for a different family of Linux distros.</p>
+                  </div>
+                </div>
+                <p className="text-white/60 font-medium text-sm mt-4">
+                  A .deb won't run on Windows, and a .exe won't run on Linux — they're compiled for completely different environments. This is why you can't just grab any download and expect it to work everywhere.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.7}>
               <div className="bg-accent text-accent-foreground p-7 rounded-3xl shadow-lg h-full">
                 <div className="text-4xl mb-4">🔢</div>
                 <h3 className="text-xl font-black mb-3">Hexadecimal — Binary's Shorthand</h3>
