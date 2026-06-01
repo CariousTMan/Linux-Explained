@@ -470,7 +470,117 @@ function Home() {
               </div>
             </FadeIn>
 
+            <FadeIn delay={0.7}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">⚔️</div>
+                <h3 className="text-xl font-black text-white mb-3">systemd-boot vs GRUB</h3>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  You already know GRUB — it's the most popular bootloader for Linux. But there's a newer, simpler option called <strong>systemd-boot</strong>. GRUB is powerful and can boot almost anything, including Windows. systemd-boot is much more minimal — it only knows how to load Linux (and Windows via a handoff), but it starts faster and has fewer moving parts to break. Many modern Linux installs now default to systemd-boot. It's the difference between a Swiss Army knife and a perfectly sharpened chef's knife.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.8}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">📦</div>
+                <h3 className="text-xl font-black text-white mb-3">UKI — Unified Kernel Image</h3>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  Normally, when Linux boots, it loads several separate pieces one by one: the bootloader, then the kernel (the core of Linux), then a temporary mini-filesystem, then the real OS. A <strong>Unified Kernel Image (UKI)</strong> bundles the kernel and the temporary filesystem into one single signed file. Why does that matter? Because it makes the boot process more secure — your computer can verify that nothing has been tampered with before it even starts loading Linux. It's like sealing everything in a tamper-proof envelope.
+                </p>
+              </div>
+            </FadeIn>
+
           </div>
+        </div>
+      </section>
+
+      {/* 6d. FIRMWARE DEEP DIVE */}
+      <section className="py-24 px-6 bg-foreground text-background">
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-center text-white drop-shadow-sm">
+              Firmware: A Deeper Look
+            </h2>
+            <p className="text-xl text-center text-gray-400 font-medium mb-16 max-w-3xl mx-auto">
+              Earlier we said firmware is the "building" your OS lives in. Let's break open that building and look inside, because there are actually several different kinds.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            <FadeIn delay={0.15}>
+              <div className="bg-gray-800 p-8 rounded-3xl border-2 border-gray-700 h-full">
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="text-3xl">🧓</span>
+                  <h3 className="text-2xl font-black text-white">BIOS</h3>
+                  <span className="ml-auto text-xs font-bold bg-gray-700 text-gray-300 px-3 py-1 rounded-full uppercase tracking-wider">Legacy</span>
+                </div>
+                <p className="text-gray-300 font-medium leading-relaxed mb-4">
+                  <strong className="text-white">Basic Input/Output System.</strong> BIOS is the original firmware that personal computers shipped with starting in the 1970s. When you turn on a PC, BIOS is the first thing that runs — it checks that your RAM, CPU, and storage are there, then finds your bootloader and hands off control.
+                </p>
+                <p className="text-gray-300 font-medium leading-relaxed">
+                  BIOS is ancient by computing standards. It has a 16-bit brain (very old), can only read the first 2TB of a hard drive, and can only boot from a specific tiny section of the disk called the MBR. Most new computers no longer use classic BIOS — they use UEFI instead.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.3}>
+              <div className="bg-gray-800 p-8 rounded-3xl border-2 border-gray-700 h-full">
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="text-3xl">🚀</span>
+                  <h3 className="text-2xl font-black text-white">UEFI</h3>
+                  <span className="ml-auto text-xs font-bold bg-primary text-primary-foreground px-3 py-1 rounded-full uppercase tracking-wider">Modern</span>
+                </div>
+                <p className="text-gray-300 font-medium leading-relaxed mb-4">
+                  <strong className="text-white">Unified Extensible Firmware Interface.</strong> UEFI is the modern replacement for BIOS. It has a full graphical interface (you can use your mouse in it!), supports drives larger than 2TB, loads the OS faster, and has a security feature called <strong>Secure Boot</strong> that checks nothing suspicious has replaced your bootloader.
+                </p>
+                <p className="text-gray-300 font-medium leading-relaxed">
+                  UEFI uses a special disk partition called the <strong>ESP (EFI System Partition)</strong> to store bootloaders. All modern PCs, Macs, and even some phones use UEFI. If you've ever pressed F2 or DEL at startup to see a settings screen, that was UEFI.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.45}>
+              <div className="bg-gray-800 p-8 rounded-3xl border-2 border-gray-700 h-full">
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="text-3xl">🔐</span>
+                  <h3 className="text-2xl font-black text-white">Secure Boot</h3>
+                  <span className="ml-auto text-xs font-bold bg-accent text-accent-foreground px-3 py-1 rounded-full uppercase tracking-wider">Feature</span>
+                </div>
+                <p className="text-gray-300 font-medium leading-relaxed mb-4">
+                  <strong className="text-white">Secure Boot</strong> is a UEFI feature that checks the digital signature of your bootloader before running it. Think of a signature like a wax seal on a letter — if the seal is broken, you know someone tampered with it.
+                </p>
+                <p className="text-gray-300 font-medium leading-relaxed">
+                  This stops malware from hijacking your boot process. Most Linux distributions now support Secure Boot. Some older or custom Linux setups require you to disable it, which is why you'll sometimes see tutorials telling you to "turn off Secure Boot" — not because Linux is suspicious, but because the bootloader isn't signed with a key your firmware trusts yet.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.6}>
+              <div className="bg-gray-800 p-8 rounded-3xl border-2 border-gray-700 h-full">
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="text-3xl">📟</span>
+                  <h3 className="text-2xl font-black text-white">Embedded Firmware</h3>
+                  <span className="ml-auto text-xs font-bold bg-secondary text-secondary-foreground px-3 py-1 rounded-full uppercase tracking-wider">Everywhere</span>
+                </div>
+                <p className="text-gray-300 font-medium leading-relaxed mb-4">
+                  Not all firmware is about booting a full computer. Most firmware lives quietly inside specific components and never gets seen. Your <strong>SSD</strong> has firmware that manages where data is physically written. Your <strong>GPU</strong> has firmware that controls how it renders graphics. Your <strong>USB controller</strong> has firmware just to handle plugging things in.
+                </p>
+                <p className="text-gray-300 font-medium leading-relaxed">
+                  These are updated separately from your OS — sometimes manufacturers release "firmware updates" for a hard drive or a graphics card to fix bugs or add features, just like a software update, but at the hardware level.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.7}>
+            <div className="bg-accent text-accent-foreground p-8 rounded-3xl shadow-xl max-w-3xl mx-auto text-center">
+              <p className="text-3xl mb-4">🧠</p>
+              <h3 className="text-2xl font-black mb-3">The Big Picture</h3>
+              <p className="text-lg font-medium leading-relaxed opacity-90">
+                From the moment you press the power button: <strong>Embedded firmware</strong> wakes up each component → <strong>UEFI/BIOS</strong> checks everything is working → <strong>Bootloader</strong> (GRUB or systemd-boot) loads → <strong>Operating System</strong> (Linux or Windows) takes over → <strong>Apps</strong> run on top. Every layer depends on the one below it.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
