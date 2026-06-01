@@ -81,7 +81,7 @@ function Home() {
             </h2>
           </FadeIn>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-3xl mx-auto mb-16">
             <FadeIn delay={0.2}>
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border-2 border-white/20 shadow-lg">
                 <p className="text-xl md:text-2xl font-medium leading-relaxed text-white">
@@ -93,6 +93,99 @@ function Home() {
                 </p>
               </div>
             </FadeIn>
+          </div>
+
+          <FadeIn>
+            <h3 className="text-2xl md:text-3xl font-black text-white text-center mb-10 opacity-80">
+              Want to go deeper? Here's where it all came from.
+            </h3>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <FadeIn delay={0.1}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">🕰️</div>
+                <h3 className="text-xl font-black text-white mb-3">Unix — Where It All Started</h3>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  In <strong>1969</strong>, engineers at Bell Labs (AT&T) built an operating system called <strong>Unix</strong>. It introduced ideas that every modern OS still uses today — the idea of files and folders, running multiple programs at once, and user permissions. Unix was the grandfather of almost everything. Linux is directly inspired by it. macOS is actually built on a Unix foundation. Even the command line you see hackers use in movies comes from Unix.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">💾</div>
+                <h3 className="text-xl font-black text-white mb-3">Windows 98 & The DOS Days</h3>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  Before Windows looked the way it does now, it was very different. In the 1980s, PCs ran <strong>MS-DOS</strong> — a text-only OS where you typed every command by hand with no mouse. Windows started as a graphical layer on top of DOS. <strong>Windows 98</strong> was a huge moment — it brought the Start Menu, plug-and-play hardware, and Internet Explorer to millions of homes for the first time. It's what turned the PC from a nerdy tool into a household appliance.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.3}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">🌳</div>
+                <h3 className="text-xl font-black text-white mb-3">The Unix Family Tree</h3>
+                <p className="text-white/80 font-medium leading-relaxed mb-4">
+                  Unix had many descendants. Some were free, some cost money. Here's the rough family:
+                </p>
+                <div className="space-y-2 text-sm font-medium">
+                  <div className="bg-white/10 rounded-xl px-4 py-2 text-white">Unix (1969) — the original</div>
+                  <div className="ml-4 bg-white/10 rounded-xl px-4 py-2 text-white">BSD — free Unix clone (1977)</div>
+                  <div className="ml-8 bg-white/10 rounded-xl px-4 py-2 text-white">macOS — Apple's Unix (2001)</div>
+                  <div className="ml-4 bg-white/10 rounded-xl px-4 py-2 text-white">Linux — inspired by Unix (1991)</div>
+                  <div className="ml-8 bg-white/10 rounded-xl px-4 py-2 text-white">Android, ChromeOS, Ubuntu...</div>
+                  <div className="bg-white/10 rounded-xl px-4 py-2 text-white/60">Windows — separate lineage entirely</div>
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.4}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">01</div>
+                <h3 className="text-xl font-black text-white mb-3">Binary — What Computers Actually Speak</h3>
+                <p className="text-white/80 font-medium leading-relaxed mb-4">
+                  At the very bottom of everything — underneath the OS, underneath the firmware — computers only understand one thing: <strong>binary</strong>. That's just 1s and 0s. On or off. Electricity flowing or not.
+                </p>
+                <p className="text-white/80 font-medium leading-relaxed mb-4">
+                  The letter "A" is <code className="bg-white/20 rounded px-1">01000001</code> in binary. The number 7 is <code className="bg-white/20 rounded px-1">00000111</code>. Every image, every song, every game is ultimately billions of these tiny switches being flipped on and off, billions of times per second.
+                </p>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  The OS's job partly involves translating between the human-friendly things you do (click a button, type a letter) and the binary the chip actually executes.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.5}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">🧩</div>
+                <h3 className="text-xl font-black text-white mb-3">The Kernel — The OS's Inner Core</h3>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  The heart of any OS is called the <strong>kernel</strong>. It's the part that actually talks to the hardware. Everything else — the desktop, the taskbar, the file browser — is just a pretty shell around the kernel. Linux is technically <em>just the kernel</em>; when people say "I use Linux," they mean the kernel plus a bunch of other software around it. The Windows kernel is called <strong>NT</strong> (New Technology) and has been around since 1993. The Linux kernel was written by a Finnish university student named <strong>Linus Torvalds</strong> in 1991.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.6}>
+              <div className="bg-accent text-accent-foreground p-7 rounded-3xl shadow-lg h-full">
+                <div className="text-4xl mb-4">🔢</div>
+                <h3 className="text-xl font-black mb-3">Hexadecimal — Binary's Shorthand</h3>
+                <p className="font-medium leading-relaxed opacity-90 mb-4">
+                  Binary is hard to read. So programmers invented <strong>hexadecimal</strong> — a number system that uses 0–9 plus A–F to represent values. It packs four binary digits into one symbol.
+                </p>
+                <div className="bg-black/20 rounded-2xl p-4 font-mono text-sm space-y-1">
+                  <p><span className="opacity-60">Binary: </span>0000 = <span className="font-bold">0</span></p>
+                  <p><span className="opacity-60">Binary: </span>1010 = <span className="font-bold">A</span></p>
+                  <p><span className="opacity-60">Binary: </span>1111 = <span className="font-bold">F</span></p>
+                  <p><span className="opacity-60">Color #FF5733 = </span><span className="font-bold">255 red, 87 green, 51 blue</span></p>
+                </div>
+                <p className="font-medium leading-relaxed opacity-90 mt-4 text-sm">
+                  You've seen hex every time you've seen a color like <strong>#FF5733</strong> in an art app or on a website.
+                </p>
+              </div>
+            </FadeIn>
+
           </div>
         </div>
       </section>
