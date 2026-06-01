@@ -384,6 +384,96 @@ function Home() {
         </div>
       </section>
 
+      {/* 6c. GOING DEEPER: PHONE STUFF & BOOTLOADERS */}
+      <section className="py-24 px-6 bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent/10 rounded-full blur-3xl" />
+        <div className="max-w-6xl mx-auto relative z-10">
+          <FadeIn>
+            <h2 className="text-4xl md:text-6xl font-black mb-6 text-center text-white drop-shadow-sm">
+              Going Deeper: The Stuff They Don't Teach You
+            </h2>
+            <p className="text-xl text-center text-white/70 font-medium mb-16 max-w-3xl mx-auto">
+              Once you know about operating systems and hardware, a whole world of more advanced — but genuinely fascinating — concepts opens up. Here's a quick tour.
+            </p>
+          </FadeIn>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <FadeIn delay={0.1}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">🔓</div>
+                <h3 className="text-xl font-black text-white mb-3">Jailbreaking a Phone</h3>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  Apple locks down iPhones hard — you can only install apps they approve. <strong>Jailbreaking</strong> is the process of tricking the iPhone into removing those restrictions so you can install anything you want. It's legal to do to your own phone, but it voids your warranty and can make it less secure. Think of it like breaking the seal on something — you can, but Apple won't help you if things go wrong.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">🐧</div>
+                <h3 className="text-xl font-black text-white mb-3">PostmarketOS</h3>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  Remember how Linux can run on almost anything? <strong>PostmarketOS</strong> is a version of Linux that people have gotten running on old Android phones. So instead of throwing away a phone from 2015 that no longer gets updates, you can flash PostmarketOS onto it and give it a whole new life with a full Linux operating system. It's complicated to set up, but it's genuinely impressive.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.3}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">🌱</div>
+                <h3 className="text-xl font-black text-white mb-3">Rooting a Phone</h3>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  On Android, <strong>rooting</strong> is similar to jailbreaking on iPhone — it gives you "root" access, meaning you become the all-powerful admin of your own phone. Normally Android hides a lot of controls from you. With root, you can delete apps that came pre-installed, change deep system settings, or even install a completely different version of Android. More power, more risk.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.4}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-black text-white mb-3">Fastboot vs Firmware</h3>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  <strong>Firmware</strong> is the low-level software baked into your hardware (you already know this!). <strong>Fastboot</strong> is a tool you can use on a computer to talk directly to an Android phone at the hardware level — before the OS even loads. It lets you flash (write) new software directly onto the phone's storage. Developers use it to install custom operating systems or recover a phone that won't turn on normally.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.5}>
+              <div className="bg-white/10 backdrop-blur-sm p-7 rounded-3xl border-2 border-white/20 shadow-lg h-full hover:bg-white/15 transition-colors duration-300">
+                <div className="text-4xl mb-4">🥾</div>
+                <h3 className="text-xl font-black text-white mb-3">Bootloaders for PCs</h3>
+                <p className="text-white/80 font-medium leading-relaxed">
+                  When your PC turns on, the firmware (BIOS/UEFI) wakes up and immediately hands control to a small program called a <strong>bootloader</strong>. The bootloader's only job is to find your operating system and start it. On Linux, the most common bootloader is called <strong>GRUB</strong>. If you have both Windows and Linux installed, GRUB shows you a menu at startup asking which one you want to boot into — this is called <strong>dual booting</strong>.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.6}>
+              <div className="bg-accent text-accent-foreground p-7 rounded-3xl shadow-lg h-full hover:brightness-105 transition-all duration-300">
+                <div className="text-4xl mb-4">🛠️</div>
+                <h3 className="text-xl font-black mb-3">Developer Options</h3>
+                <p className="font-medium leading-relaxed opacity-90 mb-4">
+                  Android phones hide a secret menu called <strong>Developer Options</strong> that's normally invisible. It has advanced controls that most people don't need — but it's also where you enable things like USB debugging (needed for Fastboot) or animation speed tweaks.
+                </p>
+                <div className="bg-black/20 rounded-2xl p-4">
+                  <p className="font-bold mb-2">How to unlock it:</p>
+                  <ol className="space-y-1 font-medium opacity-90 list-none">
+                    <li>1. Go to <strong>Settings</strong></li>
+                    <li>2. Tap <strong>About Phone</strong></li>
+                    <li>3. Find <strong>Build Number</strong></li>
+                    <li>4. Tap it <strong>7 times in a row</strong></li>
+                    <li>5. Developer Options appears in Settings!</li>
+                  </ol>
+                </div>
+              </div>
+            </FadeIn>
+
+          </div>
+        </div>
+      </section>
+
       {/* 7. WHICH ONE IS RIGHT FOR YOU? */}
       <section className="py-24 px-6 bg-accent text-accent-foreground">
         <div className="max-w-4xl mx-auto text-center">
