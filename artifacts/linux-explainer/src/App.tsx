@@ -16,7 +16,7 @@ function Home() {
       {/* scrolling banner */}
       <div style={{ background: "#ff0055", color: "white", padding: "8px 0", overflow: "hidden", whiteSpace: "nowrap" }}>
         <span style={{ display: "inline-block", animation: "marquee 22s linear infinite", fontWeight: "bold", fontSize: "14px" }}>
-          &nbsp;&nbsp;&nbsp;★ WELCOME TO MY LINUX VS WINDOWS WEBSITE ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ MADE FOR COMPUTER CLASS ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ PLEASE DONT STEAL MY CODE ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ WORKS BEST IN GOOGLE CHROME ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ I LEARNED HTML IN ONE WEEK ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;★ WELCOME TO MY LINUX VS WINDOWS WEBSITE ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ MADE FOR SCIENCE CLASS ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ PLEASE DONT STEAL MY CODE ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ WORKS BEST IN GOOGLE CHROME ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;★ I LEARNED HTML IN ONE WEEK ★&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </span>
       </div>
 
