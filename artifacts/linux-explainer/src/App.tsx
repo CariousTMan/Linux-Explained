@@ -336,7 +336,7 @@ function Home() {
           Built for awesome 7th graders. Go learn something cool today!! 🚀
         </p>
         <p style={{ margin: "0 0 8px 0", color: "#aaa", fontSize: "13px" }}>
-          made for computer class :) &nbsp;|&nbsp; <span style={{ animation: "blink 1s step-start infinite", color: "#ffdd00" }}>★ BEST VIEWED IN GOOGLE CHROME ★</span>
+          made for science class :) &nbsp;|&nbsp; <span style={{ animation: "blink 1s step-start infinite", color: "#ffdd00" }}>★ BEST VIEWED IN GOOGLE CHROME ★</span>
         </p>
         <p style={{ margin: 0, color: "#555", fontSize: "13px" }}>
           visitors: <strong style={{ color: "#ffdd00" }}>1,337</strong> people have visited this page!! wow!!
