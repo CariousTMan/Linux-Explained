@@ -47,22 +47,22 @@ function Home() {
           <div style={{ background: "white", border: "4px solid #7700cc", borderRadius: "12px", padding: "25px", marginBottom: "30px" }}>
             <p style={{ fontSize: "17px", lineHeight: "1.8", margin: 0 }}>
               Okay so imagine your computer is a movie set. You have actors (your apps), cameras (your screen), and microphones (your speakers).
-              But without a <strong>Director</strong> telling everyone what to do, it's just chaos!! 🎬
+              But without a <strong>Director</strong> telling everyone what to do, it's just chaos! 🎬
               <br /><br />
               An <strong>Operating System (or OS)</strong> is that Director. It makes sure Minecraft gets the power it needs, your YouTube video has sound, and your keyboard actually types letters. Pretty cool right??
             </p>
           </div>
 
           <h3 style={{ textAlign: "center", color: "#0055ff", fontSize: "18px", marginBottom: "16px" }}>
-            -- some extra stuff i learned (its actually really interesting!!) --
+            -- some extra stuff i learned (its actually really interesting!) --
           </h3>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "14px" }}>
             {[
-              { color: "#cc6600", title: "🕰️ Unix (1969)", text: 'Unix was the GRANDFATHER of all operating systems. Made in 1969 by Bell Labs. Linux is basically inspired by it. Even macOS uses Unix underneath!!' },
-              { color: "#0055ff", title: "💾 Windows 98 & DOS", text: "Before Windows had a Start Menu it was just a black screen where you typed commands!! Called MS-DOS. Windows 98 was the first one most people used at home." },
-              { color: "#9900cc", title: "🌳 The Unix Family Tree", text: "Unix had kids: BSD → macOS, and Linux. Windows is in its own separate family (called NT). That's why .exe files don't work on Linux!!" },
-              { color: "#cc0000", title: "01 Binary", text: 'Computers ONLY understand 1s and 0s. The letter "A" is 01000001 in binary. Every video game, song, and website is just billions of on/off switches. Wild!!' },
+              { color: "#cc6600", title: "🕰️ Unix (1969)", text: 'Unix was the GRANDFATHER of all operating systems. Made in 1969 by Bell Labs. Linux is basically inspired by it. Even macOS uses Unix underneath!' },
+              { color: "#0055ff", title: "💾 Windows 98 & DOS", text: "Before Windows had a Start Menu it was just a black screen where you typed commands! Called MS-DOS. Windows 98 was the first one most people used at home." },
+              { color: "#9900cc", title: "🌳 The Unix Family Tree", text: "Unix had kids: BSD → macOS, and Linux. Windows is in its own separate family (called NT). That's why .exe files don't work on Linux!" },
+              { color: "#cc0000", title: "01 Binary", text: 'Computers ONLY understand 1s and 0s. The letter "A" is 01000001 in binary. Every video game, song, and website is just billions of on/off switches. Wild!' },
               { color: "#007700", title: "🧩 The Kernel", text: "The kernel is the innermost part of the OS. It talks directly to the hardware. Linux is JUST a kernel technically - everything else around it is extra software." },
               { color: "#006699", title: "📥 .exe vs .deb files", text: "Different OSes use different file formats. .exe is Windows only. .deb is for Ubuntu/Linux. You can't run a .exe on Linux - it's like putting a Nintendo cartridge in a PlayStation." },
             ].map((card, i) => (
@@ -104,10 +104,10 @@ function Home() {
           </h2>
           <div style={{ background: "#e0c3f5", border: "4px solid #9900cc", borderRadius: "12px", padding: "25px", transform: "rotate(-0.5deg)" }}>
             <p style={{ fontSize: "17px", lineHeight: "1.8", margin: "0 0 15px 0" }}>
-              The <strong>REBEL</strong> of the computer world!! It has a cute penguin mascot named Tux 🐧
+              The <strong>REBEL</strong> of the computer world! It has a cute penguin mascot named Tux 🐧
             </p>
             <p style={{ fontSize: "17px", lineHeight: "1.8", margin: 0 }}>
-              It wasn't made by one giant company to make money. Thousands of smart people around the world decided to give it away for <strong>FREE</strong>. You can change ANYTHING about it, and it secretly runs most of the internet!!
+              It wasn't made by one giant company to make money. Thousands of smart people around the world decided to give it away for <strong>FREE</strong>. You can change ANYTHING about it, and it secretly runs most of the internet!
             </p>
           </div>
         </div>
@@ -119,10 +119,10 @@ function Home() {
       <div style={{ background: "white", padding: "60px 20px" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: 'Impact, "Arial Black", sans-serif', textAlign: "center", fontSize: "clamp(36px, 8vw, 60px)", color: "#ff0055", marginBottom: "6px", textShadow: "3px 3px 0 #ffd0d0" }}>
-            THE EPIC SHOWDOWN!!
+            THE EPIC SHOWDOWN!
           </h2>
           <p style={{ textAlign: "center", color: "#888", marginBottom: "28px", fontSize: "15px" }}>
-            (i made this table myself using HTML!! 😎)
+            (i made this table myself using HTML! 😎)
           </p>
 
           <div style={{ overflowX: "auto" }}>
@@ -136,14 +136,14 @@ function Home() {
               </thead>
               <tbody>
                 {[
-                  { cat: "💰 Cost", win: "Costs money (~$130+ or comes with PC)", lin: "100% FREE forever!!" },
+                  { cat: "💰 Cost", win: "Costs money (~$130+ or comes with PC)", lin: "100% FREE forever!" },
                   { cat: "🔒 Privacy", win: "Collects some data, sends it to Microsoft", lin: "Open source = anyone can check the code" },
                   { cat: "🎮 Gaming", win: "★★★★★ Best gaming support", lin: "★★★☆☆ Getting better with Steam/Proton!" },
                   { cat: "🛡️ Viruses", win: "More viruses target it (more users = more targets)", lin: "Way fewer viruses in the wild" },
                   { cat: "🖥️ Software", win: "Almost every app works on Windows", lin: "Some apps don't work (but alternatives exist)" },
                   { cat: "⚙️ Customizing", win: "Some options, but limited", lin: "You can change LITERALLY EVERYTHING" },
                   { cat: "📞 Getting Help", win: "Easy — most people use it", lin: "Big online community, can be confusing at first" },
-                  { cat: "🐢 Old Computers", win: "Windows 11 won't install on old hardware", lin: "Can bring old slow computers back to life!!" },
+                  { cat: "🐢 Old Computers", win: "Windows 11 won't install on old hardware", lin: "Can bring old slow computers back to life!" },
                 ].map((row, i) => (
                   <tr key={i} style={{ background: i % 2 === 0 ? "#f9f9f9" : "white" }}>
                     <td style={{ padding: "11px 14px", borderTop: "1px solid #ddd", fontWeight: "bold", color: "#333" }}>{row.cat}</td>
@@ -163,19 +163,19 @@ function Home() {
       <div style={{ background: "#ddf5dd", padding: "60px 20px" }}>
         <div style={{ maxWidth: "820px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: 'Impact, "Arial Black", sans-serif', textAlign: "center", fontSize: "clamp(30px, 6vw, 50px)", color: "#007700", marginBottom: "16px" }}>
-            LINUX IS EVERYWHERE!! 🌍
+            LINUX IS EVERYWHERE! 🌍
           </h2>
           <p style={{ textAlign: "center", fontSize: "17px", color: "#333", marginBottom: "28px", lineHeight: "1.6" }}>
             You probably use Linux every day without even knowing it lol. Here's where it's hiding:
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "14px" }}>
             {[
-              { icon: "📱", title: "Android Phones", text: "Android is built on the Linux kernel. That means most smartphones in the world run Linux!!" },
+              { icon: "📱", title: "Android Phones", text: "Android is built on the Linux kernel. That means most smartphones in the world run Linux!" },
               { icon: "🌐", title: "The Internet", text: "About 96% of web servers run Linux. When you visit any website, Linux is probably serving it to you." },
-              { icon: "🎮", title: "PS5 & Steam Deck", text: "The PlayStation uses a customized OS built on Linux. So does the Steam Deck!!" },
-              { icon: "🚀", title: "SpaceX Rockets", text: "The computers that control SpaceX rockets run Linux. ACTUAL ROCKETS!!" },
+              { icon: "🎮", title: "PS5 & Steam Deck", text: "The PlayStation uses a customized OS built on Linux. So does the Steam Deck!" },
+              { icon: "🚀", title: "SpaceX Rockets", text: "The computers that control SpaceX rockets run Linux. ACTUAL ROCKETS!" },
               { icon: "🧠", title: "Smart TVs", text: "Most smart TVs run Linux underneath. Samsung, LG, and lots more." },
-              { icon: "☁️", title: "Cloud Computing", text: "Google, Amazon, and Microsoft all run their cloud servers on Linux. Even Microsoft uses Linux!!" },
+              { icon: "☁️", title: "Cloud Computing", text: "Google, Amazon, and Microsoft all run their cloud servers on Linux. Even Microsoft uses Linux!" },
             ].map((item, i) => (
               <div key={i} style={{ background: "white", border: "3px solid #007700", borderRadius: "10px", padding: "18px", textAlign: "center" }}>
                 <div style={{ fontSize: "36px", marginBottom: "8px" }}>{item.icon}</div>
@@ -198,16 +198,13 @@ function Home() {
           <h2 style={{ fontFamily: 'Impact, "Arial Black", sans-serif', textAlign: "center", fontSize: "clamp(28px, 6vw, 52px)", color: "#007777", marginBottom: "6px" }}>
             CHROMEBOOKS
           </h2>
-          <p style={{ textAlign: "center", fontSize: "clamp(20px, 4vw, 32px)", fontWeight: "bold", color: "#cc0000", marginBottom: "28px", letterSpacing: "1px" }}>
-            (dun dun duuuuunnnn 🎵)
-          </p>
 
           <div style={{ background: "white", border: "4px solid #007777", borderRadius: "12px", padding: "25px", marginBottom: "20px" }}>
             <p style={{ fontSize: "17px", lineHeight: "1.8", margin: "0 0 15px 0" }}>
               If you've ever used a computer at school that looked kind of cheap, opened in like 8 seconds, and ran everything in a browser — that was probably a <strong>Chromebook</strong>.
             </p>
             <p style={{ fontSize: "17px", lineHeight: "1.8", margin: 0 }}>
-              Chromebooks run <strong>ChromeOS</strong>, made by Google. And here's the twist: <strong>ChromeOS is built on top of Linux.</strong> So technically, your boring school laptop is a Linux computer. It just has a really locked-down version that only really wants you to use Chrome and Google Docs!!
+              Chromebooks run <strong>ChromeOS</strong>, made by Google. And here's the twist: <strong>ChromeOS is built on top of Linux.</strong> So technically, your boring school laptop is a Linux computer. It just has a really locked-down version that only really wants you to use Chrome and Google Docs!
             </p>
           </div>
 
@@ -215,7 +212,7 @@ function Home() {
             {[
               { color: "#007777", icon: "⚡", title: "Why schools love them", text: "They're cheap (~$200-300), turn on instantly, basically can't get viruses, and everything saves to Google Drive automatically. Perfect for schools that need 30 computers that just work." },
               { color: "#cc6600", icon: "🔒", title: "The catch", text: "Chromebooks are SUPER locked down. Your school's IT admin can control literally everything on it — what sites you can visit, what apps you can install, even when it turns off." },
-              { color: "#9900cc", icon: "🐧", title: "The Linux secret", text: "Newer Chromebooks actually let you enable a real Linux terminal! It's called the Linux Development Environment. So your school laptop secretly has a full Linux hiding inside it!!" },
+              { color: "#9900cc", icon: "🐧", title: "The Linux secret", text: "Newer Chromebooks actually let you enable a real Linux terminal! It's called the Linux Development Environment. So your school laptop secretly has a full Linux hiding inside it!" },
               { color: "#cc0000", icon: "💀", title: "The bad news", text: "Most Chromebooks have really weak processors and only 4GB of RAM. You can't install Windows games, Adobe apps, or most regular programs. They really only work well online." },
             ].map((card, i) => (
               <div key={i} style={{ background: "white", border: `3px solid ${card.color}`, borderRadius: "10px", padding: "16px" }}>
@@ -245,13 +242,13 @@ function Home() {
             HARDWARE: ARM64 vs x86_64 🖥️
           </h2>
           <p style={{ textAlign: "center", color: "#888", marginBottom: "28px", fontSize: "14px" }}>
-            (this is the advanced stuff but its actually really interesting!!)
+            (this is the advanced stuff but its actually really interesting!)
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "18px", marginBottom: "18px" }}>
             <div style={{ background: "white", border: "3px solid #ff6600", borderRadius: "10px", padding: "20px" }}>
               <h3 style={{ color: "#ff6600", margin: "0 0 10px 0", fontSize: "20px" }}>x86_64 (Intel / AMD)</h3>
               <p style={{ fontSize: "15px", lineHeight: "1.7", margin: 0 }}>
-                The architecture that most desktops and laptops use. Very powerful but uses more electricity. Intel and AMD both make these chips. Almost all PC games and software are built for x86_64. Your school computer probably uses this!!
+                The architecture that most desktops and laptops use. Very powerful but uses more electricity. Intel and AMD both make these chips. Almost all PC games and software are built for x86_64. Your school computer probably uses this!
               </p>
             </div>
             <div style={{ background: "white", border: "3px solid #cc0066", borderRadius: "10px", padding: "20px" }}>
@@ -263,7 +260,7 @@ function Home() {
           </div>
           <div style={{ background: "#fff0d0", border: "3px dashed #ff6600", borderRadius: "10px", padding: "18px", textAlign: "center" }}>
             <p style={{ margin: 0, fontSize: "15px", fontWeight: "bold", color: "#cc4400" }}>
-              💡 COOL FACT: Linux runs on BOTH x86_64 AND ARM64!! Windows only recently started supporting ARM and it's still not great. This is why Linux runs on everything from phones to supercomputers!!
+              💡 COOL FACT: Linux runs on BOTH x86_64 AND ARM64! Windows only recently started supporting ARM and it's still not great. This is why Linux runs on everything from phones to supercomputers!
             </p>
           </div>
         </div>
@@ -278,7 +275,7 @@ function Home() {
             GPUs: THE OTHER BRAIN 🎮
           </h2>
           <p style={{ textAlign: "center", color: "#888", marginBottom: "28px", fontSize: "14px" }}>
-            your CPU does the thinking. your GPU does the drawing. here's the difference!!
+            your CPU does the thinking. your GPU does the drawing. here's the difference!
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", gap: "18px", marginBottom: "18px" }}>
@@ -299,9 +296,9 @@ function Home() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "14px", marginBottom: "18px" }}>
             {[
-              { color: "#007700", badge: "🟢 NVIDIA", text: "Market leader. Made CUDA which lets GPUs do AI training. Historically BAD on Linux because their drivers are closed source. Getting better though!!" },
-              { color: "#cc0000", badge: "🔴 AMD", text: "Main competitor to NVIDIA. Linux community LOVES AMD because their drivers are open source and built right into the Linux kernel — they just work without any setup!!" },
-              { color: "#0055ff", badge: "🔵 Intel Arc", text: "Brand new GPU lineup from Intel. Also has open source drivers. Cheaper option. Still improving but promising!!" },
+              { color: "#007700", badge: "🟢 NVIDIA", text: "Market leader. Made CUDA which lets GPUs do AI training. Historically BAD on Linux because their drivers are closed source. Getting better though!" },
+              { color: "#cc0000", badge: "🔴 AMD", text: "Main competitor to NVIDIA. Linux community LOVES AMD because their drivers are open source and built right into the Linux kernel — they just work without any setup!" },
+              { color: "#0055ff", badge: "🔵 Intel Arc", text: "Brand new GPU lineup from Intel. Also has open source drivers. Cheaper option. Still improving but promising!" },
             ].map((b, i) => (
               <div key={i} style={{ background: "white", border: `3px solid ${b.color}`, borderRadius: "10px", padding: "15px" }}>
                 <h4 style={{ color: b.color, margin: "0 0 8px 0", fontSize: "15px" }}>{b.badge}</h4>
@@ -311,7 +308,7 @@ function Home() {
           </div>
 
           <div style={{ background: "#222", color: "white", borderRadius: "10px", padding: "22px" }}>
-            <h3 style={{ textAlign: "center", margin: "0 0 16px 0", color: "#ffdd00", fontSize: "18px" }}>GPUs aren't just for gaming anymore!!</h3>
+            <h3 style={{ textAlign: "center", margin: "0 0 16px 0", color: "#ffdd00", fontSize: "18px" }}>GPUs aren't just for gaming anymore!</h3>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "12px" }}>
               {[
                 { icon: "🤖", t: "AI Training", d: "ChatGPT was trained on thousands of NVIDIA GPUs doing parallel math" },
@@ -336,10 +333,10 @@ function Home() {
       <div style={{ background: "#ffdd00", padding: "60px 20px" }}>
         <div style={{ maxWidth: "820px", margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontFamily: 'Impact, "Arial Black", sans-serif', fontSize: "clamp(36px, 8vw, 60px)", color: "#333", marginBottom: "6px", textShadow: "2px 2px 0 white" }}>
-            QUIZ TIME!! 🧠
+            QUIZ TIME! 🧠
           </h2>
           <p style={{ color: "#555", marginBottom: "28px", fontSize: "16px" }}>
-            which one are you?? click one to find out!!
+            which one are you?? click one to find out!
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "20px", textAlign: "left" }}>
@@ -372,8 +369,8 @@ function Home() {
           {quizPick && (
             <div style={{ marginTop: "24px", background: quizPick === "windows" ? "#dde8ff" : "#eeddf5", border: `4px solid ${quizPick === "windows" ? "#0055ff" : "#9900cc"}`, borderRadius: "12px", padding: "20px", fontSize: "18px", fontWeight: "bold", color: quizPick === "windows" ? "#0044cc" : "#7700cc" }}>
               {quizPick === "windows"
-                ? "💻 You picked Team Windows!! Good choice — it's reliable and easy to use. Most games work great on it!!"
-                : "🐧 You picked Team Linux!! Awesome!! You are officially a power user. Welcome to the penguin side 🐧"}
+                ? "💻 You picked Team Windows! Good choice — it's reliable and easy to use. Most games work great on it!"
+                : "🐧 You picked Team Linux! Awesome! You are officially a power user. Welcome to the penguin side 🐧"}
             </div>
           )}
         </div>
@@ -382,7 +379,7 @@ function Home() {
       {/* FOOTER */}
       <div style={{ background: "#222", color: "white", padding: "30px 20px", textAlign: "center", borderTop: "4px solid #9900cc" }}>
         <p style={{ margin: "0 0 8px 0", fontSize: "18px", fontWeight: "bold" }}>
-          Built for awesome 7th graders. Go learn something cool today!! 🚀
+          Built for awesome 7th graders. Go learn something cool today! 🚀
         </p>
         <p style={{ margin: "0 0 8px 0", color: "#aaa", fontSize: "13px" }}>
           made for science class :) &nbsp;|&nbsp; <span style={{ animation: "blink 1s step-start infinite", color: "#ffdd00" }}>★ BEST VIEWED IN GOOGLE CHROME ★</span>
