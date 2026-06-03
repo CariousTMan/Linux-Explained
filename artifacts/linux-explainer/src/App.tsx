@@ -121,9 +121,6 @@ function Home() {
           <h2 style={{ fontFamily: 'Impact, "Arial Black", sans-serif', textAlign: "center", fontSize: "clamp(36px, 8vw, 60px)", color: "#ff0055", marginBottom: "6px", textShadow: "3px 3px 0 #ffd0d0" }}>
             THE EPIC SHOWDOWN!
           </h2>
-          <p style={{ textAlign: "center", color: "#888", marginBottom: "28px", fontSize: "15px" }}>
-            (i made this table myself using HTML! )
-          </p>
 
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", border: "3px solid black", fontSize: "15px", minWidth: "500px" }}>
