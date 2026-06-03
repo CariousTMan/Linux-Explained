@@ -187,6 +187,55 @@ function Home() {
         </div>
       </div>
 
+      <hr style={{ border: "4px solid #009999", margin: 0 }} />
+
+      {/* CHROMEBOOKS */}
+      <div style={{ background: "#e0f7f7", padding: "60px 20px" }}>
+        <div style={{ maxWidth: "820px", margin: "0 auto" }}>
+          <p style={{ textAlign: "center", fontSize: "14px", color: "#555", marginBottom: "8px", letterSpacing: "2px", textTransform: "uppercase" }}>
+            wait theres actually a third one at school...
+          </p>
+          <h2 style={{ fontFamily: 'Impact, "Arial Black", sans-serif', textAlign: "center", fontSize: "clamp(28px, 6vw, 52px)", color: "#007777", marginBottom: "6px" }}>
+            CHROMEBOOKS
+          </h2>
+          <p style={{ textAlign: "center", fontSize: "clamp(20px, 4vw, 32px)", fontWeight: "bold", color: "#cc0000", marginBottom: "28px", letterSpacing: "1px" }}>
+            (dun dun duuuuunnnn 🎵)
+          </p>
+
+          <div style={{ background: "white", border: "4px solid #007777", borderRadius: "12px", padding: "25px", marginBottom: "20px" }}>
+            <p style={{ fontSize: "17px", lineHeight: "1.8", margin: "0 0 15px 0" }}>
+              If you've ever used a computer at school that looked kind of cheap, opened in like 8 seconds, and ran everything in a browser — that was probably a <strong>Chromebook</strong>.
+            </p>
+            <p style={{ fontSize: "17px", lineHeight: "1.8", margin: 0 }}>
+              Chromebooks run <strong>ChromeOS</strong>, made by Google. And here's the twist: <strong>ChromeOS is built on top of Linux.</strong> So technically, your boring school laptop is a Linux computer. It just has a really locked-down version that only really wants you to use Chrome and Google Docs!!
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "14px", marginBottom: "20px" }}>
+            {[
+              { color: "#007777", icon: "⚡", title: "Why schools love them", text: "They're cheap (~$200-300), turn on instantly, basically can't get viruses, and everything saves to Google Drive automatically. Perfect for schools that need 30 computers that just work." },
+              { color: "#cc6600", icon: "🔒", title: "The catch", text: "Chromebooks are SUPER locked down. Your school's IT admin can control literally everything on it — what sites you can visit, what apps you can install, even when it turns off." },
+              { color: "#9900cc", icon: "🐧", title: "The Linux secret", text: "Newer Chromebooks actually let you enable a real Linux terminal! It's called the Linux Development Environment. So your school laptop secretly has a full Linux hiding inside it!!" },
+              { color: "#cc0000", icon: "💀", title: "The bad news", text: "Most Chromebooks have really weak processors and only 4GB of RAM. You can't install Windows games, Adobe apps, or most regular programs. They really only work well online." },
+            ].map((card, i) => (
+              <div key={i} style={{ background: "white", border: `3px solid ${card.color}`, borderRadius: "10px", padding: "16px" }}>
+                <div style={{ fontSize: "28px", marginBottom: "6px" }}>{card.icon}</div>
+                <h4 style={{ color: card.color, margin: "0 0 8px 0", fontSize: "15px" }}>{card.title}</h4>
+                <p style={{ margin: 0, fontSize: "13px", lineHeight: "1.6" }}>{card.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ background: "#007777", color: "white", borderRadius: "12px", padding: "20px", textAlign: "center" }}>
+            <p style={{ margin: 0, fontSize: "16px", fontWeight: "bold", lineHeight: "1.7" }}>
+              🏆 So the real school computer ranking is:<br />
+              <span style={{ color: "#ffdd00" }}>Chromebook</span> (most locked down) → <span style={{ color: "#aaddff" }}>Windows</span> (middle ground) → <span style={{ color: "#aaffaa" }}>Linux</span> (total freedom)<br />
+              <span style={{ fontSize: "13px", fontWeight: "normal", opacity: 0.85 }}>your school picked the one that lets them watch you the most lol</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
       <hr style={{ border: "4px solid #ff6600", margin: 0 }} />
 
       {/* HARDWARE: ARM vs x86 */}
@@ -337,9 +386,6 @@ function Home() {
         </p>
         <p style={{ margin: "0 0 8px 0", color: "#aaa", fontSize: "13px" }}>
           made for science class :) &nbsp;|&nbsp; <span style={{ animation: "blink 1s step-start infinite", color: "#ffdd00" }}>★ BEST VIEWED IN GOOGLE CHROME ★</span>
-        </p>
-        <p style={{ margin: 0, color: "#555", fontSize: "13px" }}>
-          visitors: <strong style={{ color: "#ffdd00" }}>1,337</strong> people have visited this page!! wow!!
         </p>
       </div>
 
