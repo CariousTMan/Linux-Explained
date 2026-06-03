@@ -1,8 +1,9 @@
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { Switch, Route, Router as WouterRouter, Link } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
+import Terminal from "./Terminal";
 import { useState } from "react";
 
 const queryClient = new QueryClient();
@@ -373,6 +374,27 @@ function Home() {
         </div>
       </div>
 
+      {/* TRY THE TERMINAL */}
+      <div style={{ background: "#0d0d0d", padding: "60px 20px", textAlign: "center" }}>
+        <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+          <h2 style={{ fontFamily: 'Impact, "Arial Black", sans-serif', fontSize: "clamp(28px, 5vw, 44px)", color: "#22cc22", marginBottom: "16px" }}>
+            SEE IT FOR YOURSELF
+          </h2>
+          <p style={{ color: "#aaa", fontSize: "16px", marginBottom: "28px", lineHeight: "1.7", fontFamily: '"Comic Sans MS", "Comic Sans", cursive' }}>
+            Want to know what Linux actually feels like without a desktop? Click below to open a real-ish terminal. Type commands, explore files, and see why programmers love this stuff.
+          </p>
+          <Link
+            href="/terminal"
+            style={{ display: "inline-block", background: "#0d0d0d", color: "#22cc22", border: "2px solid #22cc22", padding: "14px 36px", fontFamily: '"Courier New", Courier, monospace', fontSize: "16px", fontWeight: "bold", textDecoration: "none", borderRadius: "6px", letterSpacing: "1px" }}
+          >
+            $ open terminal
+          </Link>
+          <p style={{ color: "#444", fontSize: "12px", marginTop: "14px", fontFamily: '"Comic Sans MS", "Comic Sans", cursive' }}>
+            (nothing will break, it's just a demo)
+          </p>
+        </div>
+      </div>
+
       {/* FOOTER */}
       <div style={{ background: "#222", color: "white", padding: "30px 20px", textAlign: "center", borderTop: "4px solid #9900cc" }}>
         <p style={{ margin: "0 0 8px 0", fontSize: "18px", fontWeight: "bold" }}>
@@ -391,6 +413,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/terminal" component={Terminal} />
       <Route component={NotFound} />
     </Switch>
   );
