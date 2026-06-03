@@ -109,14 +109,60 @@ function runCommand(raw: string): { lines: Line[]; clear?: boolean; exit?: boole
     case "echo":
       return { lines: out(args.join(" ")) };
 
-    case "sudo":
+    case "sudo": {
       if (!args[0]) return { lines: err("sudo: no command specified") };
-      return {
-        lines: err(
-          "student is not in the sudoers file.",
-          "This incident will be reported.",
-        ),
-      };
+      const subcmd = args[0].toLowerCase();
+      const subargs = args.slice(1);
+      if (subcmd === "apt" || subcmd === "apt-get") {
+        const action = subargs[0];
+        if (action === "install") {
+          const pkg = subargs[1];
+          if (!pkg) return { lines: err("apt: package name required") };
+          return {
+            lines: out(
+              `Reading package lists... Done`,
+              `Building dependency tree... Done`,
+              `The following NEW packages will be installed:`,
+              `  ${pkg}`,
+              `0 upgraded, 1 newly installed, 0 to remove.`,
+              `Get:1 http://deb.debian.org/debian bookworm/main amd64 ${pkg}`,
+              `Fetched 420 kB in 0s`,
+              `Selecting previously unselected package ${pkg}.`,
+              `Setting up ${pkg} ...`,
+              `Processing triggers for man-db ...`,
+              `Done.`,
+            ),
+          };
+        }
+        if (action === "update") {
+          return {
+            lines: out(
+              "Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]",
+              "Get:2 http://security.debian.org bookworm-security InRelease [48.0 kB]",
+              "Fetched 199 kB in 1s (199 kB/s)",
+              "Reading package lists... Done",
+            ),
+          };
+        }
+        if (action === "upgrade") {
+          return {
+            lines: out(
+              "Reading package lists... Done",
+              "Building dependency tree... Done",
+              "Calculating upgrade... Done",
+              "0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.",
+            ),
+          };
+        }
+      }
+      if (subcmd === "reboot") {
+        return { lines: out("Broadcast message from student@debian:", "The system is going down for reboot NOW!", "", "...just kidding, it's a demo.") };
+      }
+      if (subcmd === "rm" && subargs.includes("-rf") && (subargs.includes("/") || subargs.includes("/*"))) {
+        return { lines: out("lol nice try") };
+      }
+      return { lines: out(`[sudo] running: ${args.join(" ")}`, "Done.") };
+    }
 
     case "apt":
     case "apt-get": {
