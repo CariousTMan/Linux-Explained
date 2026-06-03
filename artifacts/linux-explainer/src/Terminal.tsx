@@ -61,9 +61,9 @@ function runCommand(raw: string): { lines: Line[]; clear?: boolean; exit?: boole
 
     case "ls":
       return {
-        lines: out(
-          "\x1b[34mdocuments\x1b[0m   \x1b[34mdownloads\x1b[0m   readme.txt   notes.txt   hello.sh",
-        ),
+        lines: [
+          { type: "output", text: "documents/   downloads/   readme.txt   notes.txt   hello.sh" },
+        ],
       };
 
     case "pwd":
