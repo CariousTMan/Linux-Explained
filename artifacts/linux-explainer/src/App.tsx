@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import { useState } from "react";
+import V86Terminal from "./V86Terminal";
 
 const queryClient = new QueryClient();
 
@@ -22,11 +23,7 @@ function Home() {
               <span style={{ fontFamily: "monospace", color: "#22cc22", fontSize: "13px" }}>root@debian:~# <span style={{ animation: "blink 1s step-start infinite" }}>_</span></span>
               <button onClick={() => setTermOpen(false)} style={{ background: "none", border: "none", color: "#aaa", fontSize: "18px", cursor: "pointer", lineHeight: 1 }}>✕</button>
             </div>
-            <iframe
-              src="https://copy.sh/v86/?profile=debian"
-              style={{ flex: 1, border: "none", background: "#000" }}
-              allow="fullscreen"
-            />
+            {termOpen && <V86Terminal />}
           </div>
         </div>
       )}
@@ -122,7 +119,7 @@ function Home() {
             <button
               onClick={() => setTermOpen(true)}
               title="Launch Debian terminal"
-              style={{ display: "inline-block", background: "#0a0a0a", border: "1px solid #1a7a1a", borderRadius: "999px", padding: "2px 9px", cursor: "pointer", verticalAlign: "middle", marginLeft: "8px", boxShadow: "0 0 6px #00ff0055" }}
+              style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "#0a0a0a", border: "1px solid #1a7a1a", borderRadius: "50%", width: "78px", height: "30px", cursor: "pointer", verticalAlign: "middle", marginLeft: "8px", boxShadow: "0 0 6px #00ff0055", paddingBottom: "2px" }}
             >
               <span style={{ fontFamily: '"Courier New", monospace', color: "#00ff41", fontSize: "11px", fontWeight: "bold", letterSpacing: "0.5px", textShadow: "0 0 6px #00ff41" }}>./bash</span>
             </button>
