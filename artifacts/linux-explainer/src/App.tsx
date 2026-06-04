@@ -1,18 +1,35 @@
-import { Switch, Route, Router as WouterRouter, Link } from "wouter";
+import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
-import Terminal from "./Terminal";
 import { useState } from "react";
 
 const queryClient = new QueryClient();
 
 function Home() {
   const [quizPick, setQuizPick] = useState<"windows" | "linux" | null>(null);
+  const [termOpen, setTermOpen] = useState(false);
 
   return (
     <div style={{ fontFamily: '"Comic Sans MS", "Comic Sans", cursive', background: "#f5f0ff", minHeight: "100vh" }}>
+
+      {/* Linux terminal modal */}
+      {termOpen && (
+        <div onClick={() => setTermOpen(false)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.85)", zIndex: 1000, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div onClick={e => e.stopPropagation()} style={{ width: "min(95vw, 900px)", height: "min(85vh, 620px)", display: "flex", flexDirection: "column", border: "2px solid #22cc22", borderRadius: "8px", overflow: "hidden" }}>
+            <div style={{ background: "#111", padding: "8px 14px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontFamily: "monospace", color: "#22cc22", fontSize: "13px" }}>root@debian:~# <span style={{ animation: "blink 1s step-start infinite" }}>_</span></span>
+              <button onClick={() => setTermOpen(false)} style={{ background: "none", border: "none", color: "#aaa", fontSize: "18px", cursor: "pointer", lineHeight: 1 }}>✕</button>
+            </div>
+            <iframe
+              src="https://copy.sh/v86/?profile=debian"
+              style={{ flex: 1, border: "none", background: "#000" }}
+              allow="fullscreen"
+            />
+          </div>
+        </div>
+      )}
 
       {/* scrolling banner */}
       <div style={{ background: "#ff0055", color: "white", padding: "8px 0", overflow: "hidden", whiteSpace: "nowrap" }}>
@@ -101,7 +118,14 @@ function Home() {
       <div style={{ background: "#eeddf5", padding: "60px 20px" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>
           <h2 style={{ fontFamily: 'Impact, "Arial Black", sans-serif', textAlign: "center", fontSize: "clamp(30px, 6vw, 50px)", color: "#9900cc", marginBottom: "20px" }}>
-            MEET LINUX 
+            MEET LINUX{" "}
+            <button
+              onClick={() => setTermOpen(true)}
+              title="Launch Debian terminal"
+              style={{ display: "inline-block", background: "#0a0a0a", border: "1px solid #1a7a1a", borderRadius: "999px", padding: "2px 9px", cursor: "pointer", verticalAlign: "middle", marginLeft: "8px", boxShadow: "0 0 6px #00ff0055" }}
+            >
+              <span style={{ fontFamily: '"Courier New", monospace', color: "#00ff41", fontSize: "11px", fontWeight: "bold", letterSpacing: "0.5px", textShadow: "0 0 6px #00ff41" }}>./bash</span>
+            </button>
           </h2>
           <div style={{ background: "#e0c3f5", border: "4px solid #9900cc", borderRadius: "12px", padding: "25px", transform: "rotate(-0.5deg)" }}>
             <p style={{ fontSize: "17px", lineHeight: "1.8", margin: "0 0 15px 0" }}>
@@ -374,27 +398,6 @@ function Home() {
         </div>
       </div>
 
-      {/* TRY THE TERMINAL */}
-      <div style={{ background: "#0d0d0d", padding: "60px 20px", textAlign: "center" }}>
-        <div style={{ maxWidth: "600px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: 'Impact, "Arial Black", sans-serif', fontSize: "clamp(28px, 5vw, 44px)", color: "#22cc22", marginBottom: "16px" }}>
-            SEE IT FOR YOURSELF
-          </h2>
-          <p style={{ color: "#aaa", fontSize: "16px", marginBottom: "28px", lineHeight: "1.7", fontFamily: '"Comic Sans MS", "Comic Sans", cursive' }}>
-            Want to know what Linux actually feels like without a desktop? Click below to open a real-ish terminal. Type commands, explore files, and see why programmers love this stuff.
-          </p>
-          <Link
-            href="/terminal"
-            style={{ display: "inline-block", background: "#0d0d0d", color: "#22cc22", border: "2px solid #22cc22", padding: "14px 36px", fontFamily: '"Courier New", Courier, monospace', fontSize: "16px", fontWeight: "bold", textDecoration: "none", borderRadius: "6px", letterSpacing: "1px" }}
-          >
-            $ open terminal
-          </Link>
-          <p style={{ color: "#444", fontSize: "12px", marginTop: "14px", fontFamily: '"Comic Sans MS", "Comic Sans", cursive' }}>
-            (nothing will break, it's just a demo)
-          </p>
-        </div>
-      </div>
-
       {/* FOOTER */}
       <div style={{ background: "#222", color: "white", padding: "30px 20px", textAlign: "center", borderTop: "4px solid #9900cc" }}>
         <p style={{ margin: "0 0 8px 0", fontSize: "18px", fontWeight: "bold" }}>
@@ -413,7 +416,6 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/terminal" component={Terminal} />
       <Route component={NotFound} />
     </Switch>
   );
