@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import { useState } from "react";
-import V86Terminal from "./V86Terminal";
+import Terminal from "./Terminal";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +23,7 @@ function Home() {
               <span style={{ fontFamily: "monospace", color: "#22cc22", fontSize: "13px" }}>root@debian:~# <span style={{ animation: "blink 1s step-start infinite" }}>_</span></span>
               <button onClick={() => setTermOpen(false)} style={{ background: "none", border: "none", color: "#aaa", fontSize: "18px", cursor: "pointer", lineHeight: 1 }}>✕</button>
             </div>
-            {termOpen && <V86Terminal />}
+            {termOpen && <Terminal />}
           </div>
         </div>
       )}
